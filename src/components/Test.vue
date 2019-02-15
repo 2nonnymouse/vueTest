@@ -12,6 +12,7 @@
       <li v-for="item in items">{{ item.title }}</li>
     </ul>
     <button v-on:click="greet">Say Greeting</button>
+    <input type="text" v-on:keyup="pressKey">
   </div>
 </template>
 
@@ -36,6 +37,9 @@ export default {
   methods: {
     greet: function() {
       alert("Hello");
+    },
+    pressKey: function(){
+      console.log('pressed');
     }
   }
 };
