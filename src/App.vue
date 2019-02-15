@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img width="25%" src="./assets/logo.png" /> -->
     <!-- <HelloWorld/> -->
-    <Test /> <Test2 />
+    <Test /> <Test2 msg="Hello" />
   </div>
 </template>
 
