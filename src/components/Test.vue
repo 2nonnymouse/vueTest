@@ -7,7 +7,12 @@
     <p v-text="user.firstName"></p>
     <p v-if="showName">{{ user.lastName }}</p>
     <p v-else="showName">{{ user.firstName }}</p>
-
+    <br />
+    <!-- computed properties used to watch things and update properties -->
+    <label>First Name: </label><input type="text" v-model="user.firstName" />
+    <br />
+    <label>Last Name: </label><input type="text" v-model="user.lastName" />
+    <h1>{{ fullName }}</h1>
     <ul>
       <li v-for="item in items">{{ item.title }}</li>
     </ul>
@@ -44,6 +49,12 @@ export default {
     },
     enterHit: function() {
       console.log("You hit enter");
+    },
+    computed: {
+      fullName: function() {
+        return;
+        this.user.firstName + " " + this.user.lastName;
+      }
     }
   }
 };
